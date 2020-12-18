@@ -1,0 +1,23 @@
+.imagem {
+  text-align: center;
+}
+
+.preco {
+  margin-bottom: 50px;
+}
+
+.preco span {
+  font-size: 30px;
+}
+
+label {
+  text-decoration: underline;
+}
+
+#sinopse div p {
+  text-align: justify;
+}
+
+.container {
+  padding: 50px;
+}

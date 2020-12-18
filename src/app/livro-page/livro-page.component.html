@@ -1,0 +1,35 @@
+<app-header></app-header>
+
+<div class="container shadow bg-light">
+  <div class="row" *ngIf="livro$ | async as livro">
+    <div class="col imagem">
+      <img class="shadow" src="{{ livro.capa }}" alt="{{ livro.nome }}">
+    </div>
+    <div class="col">
+      <div class="row">
+        <div class="col">
+          <h3>{{ livro.nome }}</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <span>{{ livro.autor }}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 preco">
+          <span class="text-info">R$ {{ livro.preco }}</span>
+        </div>
+        <div class="col-6">
+          <button class="btn btn-block btn-success">Comprar</button>
+        </div>
+      </div>
+      <label for="sinopse">Sinopse: </label>
+      <div id="sinopse" class="row">
+        <div class="col">
+          <p>{{ livro.sinopse }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

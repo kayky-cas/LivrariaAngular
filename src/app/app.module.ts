@@ -11,6 +11,8 @@ import { NavComponent } from './nav/nav.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { LivrosPageComponent } from './livros-page/livros-page.component';
+import { LivroPageComponent } from './livro-page/livro-page.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     HomePageComponent,
     HeaderComponent,
     NavComponent,
+    LivrosPageComponent,
+    LivroPageComponent,
 
   ],
   imports: [
