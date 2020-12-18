@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "livraria-angular": {
+      "hosting": {
+        "angular-framework": [
+          "livraria-angular"
+        ]
+      }
+    }
+  }
+}
