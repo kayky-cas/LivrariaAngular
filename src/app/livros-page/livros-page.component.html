@@ -5,7 +5,7 @@
   <div class="row">
     <div class="col-sm-3" *ngFor="let livro of livros$ | async">
       <div class="card">
-        <img src="{{ livro.capa }}" alt="">
+        <img class="img-card" src="{{ livro.capa }}" alt="{{ livro.nome }}">
         <div class="card-body">
           <h5 class="card-title">{{ livro.nome }}</h5>
           <p class="card-text">{{ livro.sinopse.substr(0, 90) }}...</p>

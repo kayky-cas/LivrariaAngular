@@ -11,19 +11,19 @@ import { Observable } from 'rxjs';
 })
 export class LivroPageComponent implements OnInit {
 
-  livro$: any;
+  livro$: Observable<any>;
 
   constructor(private firestore: AngularFirestore, private route: ActivatedRoute) {
-
-  }
-
-  ngOnInit(): void {
     this.livro$ = this.route.paramMap.pipe(
       switchMap(params => {
         const id = params.get('id');
         return this.firestore.doc('livros/' + id).valueChanges();
       })
     );
+  }
+
+  ngOnInit(): void {
+
 
   }
 
