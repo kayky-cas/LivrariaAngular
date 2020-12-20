@@ -13,6 +13,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { LivrosPageComponent } from './livros-page/livros-page.component';
 import { LivroPageComponent } from './livro-page/livro-page.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { SobrePageComponent } from './sobre-page/sobre-page.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { LivroPageComponent } from './livro-page/livro-page.component';
     NavComponent,
     LivrosPageComponent,
     LivroPageComponent,
+    SobrePageComponent,
 
   ],
   imports: [
@@ -30,6 +33,7 @@ import { LivroPageComponent } from './livro-page/livro-page.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent]

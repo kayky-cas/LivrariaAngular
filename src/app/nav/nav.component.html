@@ -10,10 +10,10 @@
         <a class="nav-link" [routerLink]="['/livros']">Livros</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Sobre</a>
+        <a class="nav-link" [routerLink]="['/sobre']">Sobre</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <form [ngStyle]="{'display': route === '/livros' ? 'block' : 'none' }" class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Livro" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
     </form>
